@@ -32,6 +32,7 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v5
       if: startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/master'
       with:
+         path: docker/micro-sock
          dockerfile: ./Dockerfile
          registry: docker.io
          image: venupj/micro-sock
